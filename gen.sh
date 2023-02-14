@@ -46,7 +46,7 @@ fi
 
 echo -e "Running TLAPS on specification \e[1m$spec_file\e[0m with configuration \e[1m$conf_file\e[0m"
 
-cmd="$tlapm --cache-dir $cachedir -I $tlapm_dir/library -I $community_modules/modules -I $specdir --toolbox 0 0 --nofp --stretch 0.1 --debug tempfiles --smt-logic $smt_logic --method $meth --debug $flags $spec_file"
+cmd="$tlapm --cache-dir $cachedir -I $tlapm_dir -I $community_modules -I $specdir --toolbox 0 0 --nofp --stretch 0.5 --debug tempfiles --smt-logic $smt_logic --method $meth --debug $flags $spec_file"
 
 # This spec in particular needs an additional include
 if [ $spec_file = "tla_specs/Original/TLAplus_Examples/specifications/ewd998/AsyncTerminationDetection_proof.tla" ]; then
